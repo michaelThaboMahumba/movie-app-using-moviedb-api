@@ -1,0 +1,64 @@
+<form action="https://formspree.io/f/{form_id}" method="post">
+  <label for="email">Your Email</label>
+  <input name="Email" id="email" type="email">
+  <button type="submit">Submit</button>
+</form>
+<form action="#">
+  <input type="email"class="email"placeholder="Enter Email"required><input type="submit"value="Submit"class="btn">
+</form>
+//newsletter setup.
+const newsletter=document.querySelector(".email").value;
+console.log(newsletter);
+document.addEventListener('DOMContentLoaded', function() {
+  const newsletterForm = document.getElementById('newsletterForm');
+  const newsletterResponse = document.getElementById('newsletterResponse');
+
+  newsletterForm.addEventListener('submit', function(e) {
+    e.preventDefault(); // Prevent the form from submitting normally
+
+    const emailInput = newsletterForm.querySelector('.email');
+    const email = emailInput.value.trim();
+
+    // Check if the email is valid (you can use regular expressions for a more robust check)
+    if (!isValidEmail(email)) {
+      newsletterResponse.innerHTML = 'Please enter a valid email address.';
+      return;
+    }
+
+    // Replace 'YOUR_API_ENDPOINT' with the actual API endpoint you want to use
+    const apiEndpoint = 'YOUR_API_ENDPOINT';
+
+    // Prepare the data to send to the API (you can add more data as needed)
+    const data = {
+      email: email,
+      topic: 'New Movie Releases', // You can specify the topic of the newsletter
+    };
+
+    // Send the data to the API using fetch or another AJAX method
+    fetch(apiEndpoint, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    })
+      .then(response => response.json())
+      .then(responseData => {
+        // Handle the API response here (e.g., show a success message)
+        newsletterResponse.innerHTML = responseData.message;
+        emailInput.value = ''; // Clear the email input
+      })
+      .catch(error => {
+        // Handle any errors that occur during the API request
+        console.error('Error:', error);
+        newsletterResponse.innerHTML = 'An error occurred. Please try again later.';
+      });
+  });
+
+  // Function to validate email format (simple example)
+  function isValidEmail(email) {
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailPattern.test(email);
+  }
+});
+

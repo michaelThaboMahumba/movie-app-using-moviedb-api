@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Watch the most trending movies for free with Movie-X">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+<header>
+    <a href="#home" class="logo">
+        <i class="bx bxs-movie"></i>Movie-X
+    </a>
+    <div class="bx bx-menu" id="menu-icon"></div>
+    <ul class="navbar">
+        <li><a href="#home" class="home-active">Home</a></li>
+        <li><a href="#trending">Trending</a></li>
+        <li><a href="#coming">Coming Soon</a></li>
+        <li><a href="#series">Series</a></li>
+        <li><a href="#newsletter">Newsletter</a></li>
+    </ul>
+    <button type="submit" class="popup-btn">Login</button>
+</header>
+
+<div class="user_setup in_middle hide_on_small">
+    <div class="wrapper">
+        <span class="icon-close"></span>
+        <div class="form-box Login">
+            <h2>LOGIN</h2>
+            <form action="">
+                <div class="input-box">
+                    <span class="icon"></span>
+                    <input type="email" name="email" id="email">
+                    <label for="email">Email</label>
+                </div>
+
+                <div class="input-box">
+                    <span class="icon"></span>
+                    <input type="password" name="password" id="password">
+                    <label for="password">Password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label for="savalogin"><input type="checkbox" name="savalogin" id="savalogin"></label>
+                    <a href="#">Forgot password?</a>
+                </div>
+                <button type="submit" class="sub-btn" id="submit">Submit</button>
+                <div class="login-register">
+                    <p>Don't have an account? <a href="#" class="register-link">Register</a></p>
+                </div>
+            </form>
+        </div>
+
+        <div class="form-box register">
+            <h2>Sign Up</h2>
+            <form action="">
+                <div class="input-box">
+                    <span class="icon"></span>
+                    <input type="text" id="name1">
+                    <label for="name1">Username</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"></span>
+                    <input type="email" name="email">
+                    <label for="email">Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"></span>
+                    <input type="password" name="password" autocomplete>
+                    <label for="password">Password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox"></label>
+                    <a href="licence.html">I agree to the terms & conditions</a>
+                </div>
+                <button type="submit" class="sub-btn btn-primary">Submit</button>
+                <div class="login-register">
+                    <p>Already have an account? <a href="" id="submit" class="login-link">Login</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<section class="home swiper" id="home">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide container"><img src="purple-bg.jpg">
+            <div class="home-text">
+                <span id="info-movie">Marvel Universe</span>
+                <h1>Guardians of the Galaxy <br>Volume 2</h1>
+                <a href="" class="btn btn-primary">Download</a>
+                <a href="" class="play">
+                    <i class="bx bx-play"></i>
+                </a>
+            </div>
+        </div>
+        <!-- Add more swiper slides here -->
+    </div>
+    <div class="swiper-pagination"></div>
+</section>
+
+<!-- Trend section setup -->
+<section class="movies" id="trending">
+    <aside>
+        <h1 class="heading txt-S">Trending movies</h1>
+        <form action="" id="form">
+            <input type="search" placeholder="Search movies" id="search" class="search">
+        </form>
+        <div id="content"></div>
+    </aside>
+    <h2 class="heading">Opening this Week</h2>
+    <div class="movie-container">
+        <!-- Add trending movie boxes here -->
+    </div>
+</section>
+
+<!-- Coming soon section development setup -->
+<section class="coming" id="coming">
+    <h2 class="heading">Coming Soon</h2>
+    <div class="coming-container swiper">
+        <div class="swiper-wrapper">
+            <!-- Add coming soon movie boxes here -->
+        </div>
+    </div>
+</section>
+
+<section class="Movieseries" id="series">
+    <!-- Series section setup development -->
+    <h2 class="heading">Series</h2>
+    <!-- Add series boxes here -->
+</section>
+
+<h2 class="heading">Coming Soon Series</h2>
+<div class="coming-container swiper">
+    <div class="swiper-wrapper">
+        <!-- Add coming soon series boxes here -->
+    </div>
+</div>
+
+<!-- Newsletter development section -->
+<section class="newsletter" id="newsletter">
+    <h2 style="color: aliceblue;">Subscribe to get <br>Newsletter</h2>
+    <form action="">
+        <input type="text" class="email" placeholder="Enter Email" required>
+        <input type="submit" value="Submit" class="btn">
+    </form>
+</section>
+
+<!-- Footer design -->
+<section class="Footer">
+    <a href="" class="logo">
+        <i class="bx bxs-movie"></i>Movie-X
+    </a>
+    <div class="social">
+        <a href=""><i class='bx bxl-facebook'></i></a>
+        <a href=""><i class='bx bxl-discord'></i></a>
+        <a href=""><i class='bx bxl-instagram'></i></a>
+    </div>
+</section>
+
+<div class="copyright">
+    <p>Copyright &copy; 2023 by Thabo Mahumba Michael | All Rights Reserved</p>
+    <a href="#"><i class="bx bx-link-external"></i></

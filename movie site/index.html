@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="watch the most trending movies for free with Movie-X" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie-X home </title>
+     <!-- custom icons -->  
+     <link rel="stylesheet" href="style.css"> 
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>  
+ <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">-->
+</head>
+<body>
+<!--navigation bar-->
+<header>
+    <a href="#home"class="logo">
+      <img src="img/logo.jpg" alt=""class="bx bxs-movie">
+        Movie-X
+    </a>
+    <div class="bx bx-menu"id="menu-icon"></div>
+    <!--menu-->
+    <ul class="navbar">
+        <li><a href="#home"class="home-active">Home</a></li>
+        <li><a href="#trending">trending</a></li>
+        <li><a href="#coming">Comming Soon</a></li>
+        <li><a href="#series">Series</a></li>
+        <li><a href="#newsletter">Newsletter</a></li>
+    </ul>
+ <button type="submit"class="popup-btn">Login</button>  
+</header>
+
+  <!-- Home -->
+  <section class="home swiper" id="home">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide container">
+            <img src="bg2.jpg"style="background: #000;" alt="">
+            <div class="home-text">
+                <span>Watch movies</span>
+                <h1>Welcome to Movie-X <span style="font-size: 15px;font-weight: 500;"><br style="color: hsla(204, 69%, 72%, 0.774);;">A streaming app to get your day on the go</span></h1>
+                <a href="#trending" class="btn">Watch now</a>
+                <a href="#" class="play">
+                    <i class='bx bx-play'></i>
+                </a>
+            </div>
+        </div>
+        <div class="swiper-slide container">
+            <img src="img/thor-love-and-thunder-hd-poster_wxl.jpg" alt="">
+            <div class="home-text">
+                <span>Marvel Universe</span>
+                <h1>Thor: Love and Thunder</h1>
+                <a href="#" class="btn">Download</a>
+                <a href="#" class="play">
+                    <i class='bx bx-play'></i>
+                </a>
+            </div>
+        </div>
+        <div class="swiper-slide container">
+            <img src="img/DC-home.jpg" alt="">
+            <div class="home-text">
+                <span>DC Universe</span>
+                <h1>Stream dc movies here</h1>
+                <a href="#" class="btn">Download</a>
+                <a href="https://supernova.to/t2aEn0" class="play">
+                    <i class='bx bx-play'></i>
+                </a>
+            </div>
+        </div>
+        <div class="swiper-slide container">
+            <img src="img/home-bg.webp" alt="">
+            <div class="home-text">
+                <span>Anime Series</span>
+                <h1>Movie-X provides a powerful streaming service you can imagine <br> <p>for streaming anime online</p></h1>
+                <a href="https://gogoanime.network/naruto" class="btn">Watch now</a>
+                <a href="https://gogoanime.network/popular" class="play">
+                    <i class='bx bx-play'></i>
+                </a>
+            </div>
+        </div>
+           
+      </div>
+      <div class="swiper-pagination"></div>
+</section>
+<!--login && signup setup-->
+<section >
+  <div class="user_setup in_middle">
+<div class="wrapper">
+  <span class="icon-close"></span>
+<div class="form-box Login">
+  <h2>LOGIN</h2>
+  <form action="https://formspree.io/f/meqbkkwz" method="post"id="userForm">
+      <div class="input-box">
+          <span class="icon"></span>
+          <input type="email" name="email" id="email">
+          <label for="">Email</label>
+      </div>
+      <div class="input-box">
+          <span class="icon"></span>
+          <input type="password" name="password" id="password">
+          <label for="">password</label>
+      </div>
+      <div class="remember-forgot">
+          <label for="savalogin"><input type="checkbox" name="" id="savalogin"></label>
+          <a href="#">Forgot password?</a>
+      </div>
+  <button type="submit"class="sub-btn"id="submit">submit</button>
+  <div class="login-register">
+      <p>Don't have account<a href="#"class="register-link">register</a></p>
+  </div>
+  </form>
+  </div>
+  <div class="form-box register">
+      <h2>Sign Up</h2>
+      <form action="">
+          <div class="input-box">
+              <span class="icon"></span>
+              <input type="text"name="username"id="name">
+              <label for="name">username</label>
+          </div>
+          <div class="input-box">
+              <span class="icon"></span>
+              <input type="email" name="email"id="newEmail">
+              <label for="email">Email</label>
+          </div>
+          <div class="input-box">
+              <span class="icon"></span>
+              <input type="password" name="password">
+              <label >password</label>
+          </div>
+          <div class="remember-forgot">
+              <label><input type="checkbox"></label>
+              <a href="#">I agree to the terms & conditions</a>
+          </div>
+      <button type="submit"class=" sub-btn btn-primary">submit</button>
+      <div class="Login-register">
+          <p>already have an account &nbsp;<a href="#"id="submit"class="login-link">login</a></p>
+      </div>
+      </form>
+      </div>
+</div> 
+</div>
+</section>
+<!--end of login and signup setup-->
+<!--trend section setup-->
+<section class="movies"id="trending">
+ 
+  <h1 class="heading txt-S">Trending movies</h1>
+<form action=""id="form">
+  <input type="search" placeholder="search movies"id="search"class="search"datalist>
+</form>
+      <div id="content"style="display:flex;flex-wrap:wrap;"></div>
+ </section>
+<h2 class="heading">Opening this Week</h2>
+<!--container-->
+<div class="movie-container">
+  <!--box-->
+  <div class="box">
+    <div class="box-img">
+      <img src="img/aquaman.jpg" alt="">
+    </div>
+    <h3>aquaman and the lost kingdom</h3>
+    <span>120min | action</span>
+  </div>
+   <!--box1-->
+   <div class="box">
+    <div class="box-img">
+      <img src="img/blk widow.jpg" alt="">
+    </div>
+    <h3>Black Widow</h3>
+    <span>120min | action</span>
+  </div>
+   <!--box2-->
+   <div class="box">
+    <div class="box-img">
+      <img src="img/riseOFbests.jpg" alt="">
+    </div>
+    <h3>Transformers Rise of Beasts</h3>
+    <span>120min | action</span>
+  </div>
+   <!--box3-->
+   <div class="box">
+    <div class="box-img">
+      <img src="img/blk parther .jpg" alt="">
+    </div>
+    <h3 style="color: aliceblue;">Black Parther:Wakanda Forever</h3>
+    <span>120min | action</span>
+  </div>
+   <!--box4-->
+   <div class="box">
+    <div class="box-img">
+      <img src="img/grown up.jpg" alt="">
+    </div>
+    <h3>Grown up</h3>
+    <span>120min | action</span>
+  </div>
+   <!--box5-->
+   <div class="box">
+    <div class="box-img">
+      <img src="img/FX.jpg" alt="">
+    </div>
+    <h3>Fast X</h3>
+    <span>120min | action</span>
+  </div>
+     <!--box5-->
+     <div class="box">
+      <div class="box-img">
+        <img src="img/the flash.jpg" alt="">
+      </div>
+      <h3>The Flash</h3>
+      <span>120min | action</span>
+    </div>
+       <!--box6-->
+   <div class="box">
+    <div class="box-img">
+      <img src="img/Avengers endgame .jpg" alt="">
+    </div>
+    <h3>Avengers Endgane</h3>
+    <span>120min | action</span>
+  </div>
+   <!--box7-->
+   <div class="box">
+    <div class="box-img">
+      <img src="img/Joker.jpg" alt="">
+    </div>
+    <h3>The Joker</h3>
+    <span>120min | action</span>
+  </div>
+     <!--box8-->
+     <div class="box">
+      <div class="box-img">
+        <img src="img/antman.jpg" alt="">
+      </div>
+      <h3>Ant Man and the Wasp:Quantumania</h3>
+      <span>120min | action</span>
+    </div>
+</div>   
+</div>
+</section>
+<!--coming soon section development setup-->
+<section class="coming"id="coming">
+<h2 class="heading">Coming Soon</h2>
+<div class="coming-container swiper">
+  <div class="swiper-wrapper">
+    <!--box-->
+   <div class="swiper-slide box">
+    <div class="box-img">
+      <img src="img/Blue beetle .jpg" alt="">
+    </div>
+    <h3>Blue Beetle</h3>
+   </div>
+    <!--box1-->
+    <div class="swiper-slide box">
+      <div class="box-img">
+        <img src="img/deadpool3.jpg" alt="">
+      </div>
+      <h3>Deadpool 3</h3>
+     </div>
+      <!--box2-->
+   <div class="swiper-slide box">
+    <div class="box-img">
+      <img src="img/Dune2.jpg" alt="">
+    </div>
+    <h3>Dune:part 2</h3>
+   </div>
+    <!--box3-->
+    <div class="swiper-slide box">
+      <div class="box-img">
+        <img src="img/The hunter.jpg" alt="">
+      </div>
+      <h3>Kraven the Hunter</h3>
+     </div>
+</div>
+</div>
+</section>
+<section class="Movieseries"id="series">
+<!--series section setup development-->
+<h2 class="heading">Series</h2>
+<br>
+<br
+<!--container-->
+<div class="movie-container">
+  <!--box-->
+  <div class="box">
+    <div class="box-img">
+      <img src="img/Manifest season 3.jpg" alt="">
+    </div>
+    <h3>Manifest season3</h3>
+    <span>120min | action</span>
+  </div>
+   <!--box1-->
+   <div class="box">
+    <div class="box-img">
+      <img src="img/The marvels._V1_.jpg" alt="">
+    </div>
+    <h3>The Marvels</h3>
+    <span>120min | action</span>
+  </div>
+   <!--box2-->
+   <div class="box">
+    <div class="box-img">
+      <img src="img/loki.jpg" alt="">
+    </div>
+    <h3>Loki</h3>
+    <span>120min | action</span>
+  </div>
+   <!--box3-->
+   <div class="box">
+    <div class="box-img">
+      <img src="img/Truth lies.jpg" alt="">
+    </div>
+    <h3>Truth lies</h3>
+    <span>120min | action</span>
+  </div>
+   <!--box4-->
+   <div class="box">
+    <div class="box-img">
+      <img src="img/Moon Knight .jpg" alt="">
+    </div>
+    <h3>Moon Knignt</h3>
+    <span>120min | action</span>
+  </div>
+  <!--box5-->
+  <div class="box">
+    <div class="box-img">
+      <img src="img/One piece.jpg" alt="">
+    </div>
+    <h3>One Piece</h3>
+    <span >adventure</span>
+  </div>
+     <!--box5-->
+     <div class="box">
+      <div class="box-img">
+        <img src="img/demon-sly.jpg" alt="">
+      </div>
+      <h3>Demon Slayer</h3>
+      <span>Season01 | action</span>
+    </div>
+       <!--box6-->
+   <div class="box">
+    <div class="box-img">
+      <img src="img/zom100.jpg" alt="">
+    </div>
+    <h3>zom100</h3>
+    <span>120min | action</span>
+  </div>
+   <!--box7-->
+   <div class="box">
+    <div class="box-img">
+      <img src="img/images (1).jpg" alt="">
+    </div>
+    <h3>Bleach Thousand Year blood War</h3>
+    <span>13 eposides | action</span>
+  </div>
+    <!--box8-->
+    <div class="box">
+      <div class="box-img">
+        <img src="img/Witcher.jpg" alt="">
+      </div>
+      <h3>The Witcher</h3>
+      <span>latest eposide | action</span>      
+    </div>
+</div>   
+</div>
+<h2 class="heading">Coming Soon Series</h2>
+<div class="coming-container swiper">
+  <div class="swiper-wrapper">
+    <!--box "https://www.youtube.com/embed/_YUzQa_1RCE?si=5ZLYW4uBfgwiDA4K"-->
+   <div class="swiper-slide box">
+    <div class="box-img">
+      <img src="img/sollo-lev.jpg" alt="">
+    </div>
+    <h3>Sol Levelling</h3>
+   </div>
+     <!--box-->
+     <div class="swiper-slide box">
+      <div class="box-img">
+        <img src="img/One piece.jpg" alt="">
+      </div>
+      <h3>One piece</h3>
+     </div>
+    <!--box1-->
+    <div class="swiper-slide box">
+      <div class="box-img">
+        <img src="img/boruto blue votex.jpg" alt="">
+      </div>
+      <h3>Boruto two blue vortex</h3>
+     </div>
+    </div>
+  </div>
+<br>
+  <br>
+</section>
+<!--newsletter development section-->
+<section class="newsletter"id="newsletter">
+ <h2 style="color: aliceblue;">Subcribe to get <br>Newsletter</h2>
+ <form id="newsletterForm">
+  <input type="email" class="email" placeholder="Enter Email" required>
+  <input type="submit" value="Submit" class="btn">
+</form>
+<div id="newsletterResponse"></div>
+
+</section>
+<!-- footer design -->   
+<section class="Footer">
+  <a href="#"class="logo">
+    <img src="img/logo.jpg" alt=""class="bx bxs-movie"> Movie-X
+  </a>
+  <div class="social">
+    <a href="https://www.facebook.com/Thabomahumba.michael"><i class='bx bxl-facebook'></i></a>
+    <a href=""><i class='bx bxl-discord'></i></a>
+    <a href=""><i class='bx bxl-whatsapp'></i></a>
+    <a href=""><i class='bx bxl-telegram'></i></a>
+  </div>
+</section>
+<div class="copyright">
+  <p>Copyright &copy; 2023 by  Thabo Mahumba Michael |All Rights Reserved</p>
+  <p>designed and developed by Thabo Mahumba Michael</p>
+  <a href="#"><i class="bx bx-link-external"style="color: #fff;font-size:45px;"></i></a> 
+</div>
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
